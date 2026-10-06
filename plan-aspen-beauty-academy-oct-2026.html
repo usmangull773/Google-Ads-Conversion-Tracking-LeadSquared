@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aspen Beauty Academy: 30 Day Tracking Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#fff;--red:#b3261e;--green:#1f6f43;--ink:#1a2433;--muted:#5a6b80}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+b,strong{font-weight:700}
+.hl{background:rgba(200,162,74,.22);padding:0 4px;border-radius:3px;font-weight:700}
+.hld{color:var(--lgold);font-weight:700}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#9fb3c8;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:16px;margin-bottom:44px}
+.label{color:var(--gold);text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:700}
+.hero h1{font-size:40px;line-height:1.15;margin:10px 0 16px}
+.hero .lead{font-size:19px;color:#d5e0ec;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin:24px 0 36px;font-size:14px;color:#9fb3c8}
+.meta span b{color:#fff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:22px}
+.kpi .n{font-size:40px;font-weight:800;color:var(--lgold);line-height:1}
+.kpi .t{font-size:14px;color:#c9d6e4;margin-top:10px}
+
+/* Section heads */
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.sh .num{color:var(--blue);font-weight:800;font-size:15px;letter-spacing:.1em}
+.sh h2{font-size:30px;line-height:1.2}
+.intro{max-width:780px;color:var(--muted);font-size:17px;margin-bottom:32px}
+.dark .sh .num{color:var(--lgold)}
+.dark .intro{color:#c9d6e4}
+
+/* Findings */
+.findings{display:grid;gap:22px}
+.fc{background:#fff;border-radius:10px;box-shadow:0 6px 22px rgba(11,31,54,.08);padding:26px;border-left:5px solid var(--blue)}
+.fc.med{border-left-color:var(--gold)}
+.fc .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+.fc h3{font-size:20px;line-height:1.3}
+.tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.tag.high{background:var(--blue);color:#fff}
+.tag.medium{background:var(--gold);color:var(--navy)}
+.fc p{color:#3c4a5c;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid #e3e9f0;vertical-align:top}
+.tw{overflow-x:auto}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cmp div{border-radius:8px;padding:16px;font-size:14px}
+.cmp .bad{background:#fbeceb;border:1px solid #efc5c2}
+.cmp .good{background:#e8f3ec;border:1px solid #bcd9c6}
+.cmp h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.cmp .bad h4{color:var(--red)}
+.cmp .good h4{color:var(--green)}
+.cmp ul{padding-left:18px}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px}
+.flow .node{background:var(--bg);border:1px solid #c9d6e4;border-radius:6px;padding:8px 12px;font-weight:600}
+.flow .node.x{border-color:var(--red);color:var(--red);background:#fbeceb}
+.flow .node.ok{border-color:var(--green);color:var(--green);background:#e8f3ec}
+.flow .arr{color:var(--muted);font-weight:700}
+.flowrow{margin-bottom:10px}
+.flowrow small{display:block;color:var(--muted);font-size:12px;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em}
+
+/* Plan */
+.white{background:#fff}
+.timeline{background:var(--navy);border-radius:12px;padding:26px;color:#fff;margin-bottom:30px}
+.timeline h3{font-size:15px;color:var(--lgold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+.tl-row{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center;margin-bottom:12px;font-size:14px}
+.tl-track{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:rgba(255,255,255,.06);border-radius:4px;padding:3px}
+.tl-track span{height:18px;border-radius:3px}
+.tl-track .on{background:var(--gold)}
+.tl-head{display:grid;grid-template-columns:200px 1fr;gap:14px;font-size:12px;color:#9fb3c8;margin-bottom:8px}
+.tl-head .wk{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:20px}
+.step .sn{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+.step h4{font-size:18px;margin-bottom:4px}
+.step .why{color:var(--muted);font-size:14px;margin-top:6px}
+.step .why b{color:var(--blue)}
+.step ul{padding-left:18px;font-size:15px;color:#3c4a5c}
+
+/* Results */
+.dark{background:var(--navy);color:#fff}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:12px;padding:24px}
+.rc .ind{font-size:12px;color:#9fb3c8;text-transform:uppercase;letter-spacing:.1em}
+.rc .big{font-size:42px;font-weight:800;color:var(--lgold);line-height:1.1;margin:10px 0 4px}
+.rc .cap{font-size:14px;color:#d5e0ec;margin-bottom:18px}
+.bar{margin-bottom:10px;font-size:13px;color:#c9d6e4}
+.bar .lbl{display:flex;justify-content:space-between;margin-bottom:4px}
+.bar .track{background:rgba(255,255,255,.08);border-radius:3px;height:12px}
+.bar .fill{height:12px;border-radius:3px;background:#5b7898}
+.bar .fill.g{background:var(--gold)}
+.rc .lever{font-size:13px;color:#9fb3c8;border-top:1px solid rgba(255,255,255,.1);padding-top:12px;margin-top:14px}
+
+/* Next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:#fff;border-radius:10px;border-top:4px solid var(--gold);padding:24px;box-shadow:0 6px 22px rgba(11,31,54,.06)}
+.nc .k{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.nc h4{font-size:18px;margin-bottom:8px}
+.nc p,.nc li{font-size:14px;color:#3c4a5c}
+.nc ul{padding-left:18px}
+.own{margin-top:22px;background:#fff;border-radius:10px;padding:20px 24px;font-size:15px;color:#3c4a5c;border-left:5px solid var(--green)}
+
+.cta{background:var(--gold);color:var(--navy);text-align:center;padding:48px 0}
+.cta h2{font-size:30px;margin-bottom:8px}
+.cta p{font-size:17px}
+footer{background:var(--navy);color:#9fb3c8;text-align:center;padding:26px 0;font-size:14px}
+footer b{color:#fff}
+
+@media(max-width:820px){
+ .kpis,.res,.next{grid-template-columns:1fr}
+ .hero h1{font-size:30px}
+ .sh h2{font-size:24px}
+ section{padding:48px 0}
+ .tl-row,.tl-head{grid-template-columns:110px 1fr;font-size:12px}
+ .cmp{grid-template-columns:1fr}
+}
+@media(max-width:400px){
+ .wrap{padding:0 16px}
+ .hero h1{font-size:26px}
+ .kpi .n,.rc .big{font-size:34px}
+ .step{grid-template-columns:1fr}
+ .tl-row,.tl-head{grid-template-columns:86px 1fr}
+ .fc{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Google Ads Conversion Tracking and LeadSquared Integration</span><span>October 7, 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Aspen Beauty Academy of Laurel</h1>
+  <p class="lead">One connected system where every ad inquiry is tagged at the form, carried into LeadSquared, and returned to Google Ads as <span class="hld">tours, applications and enrollments that bidding can learn from</span>.</p>
+  <div class="meta">
+   <span>Campus: <b>Laurel, Maryland</b></span>
+   <span>Pages reviewed: <b>info.aspenlaurel.edu, aspenlaurel.edu</b></span>
+   <span>Scope: <b>Fixed setup project</b></span>
+  </div>
+  <div class="kpis">
+   <div class="kpi"><div class="n">0</div><div class="t">Attribution fields (GCLID or UTM) on the landing page inquiry form today</div></div>
+   <div class="kpi"><div class="n">2</div><div class="t">GTM containers plus a hardcoded GA4 tag and a legacy UA tag on the main site</div></div>
+   <div class="kpi"><div class="n">4</div><div class="t">CRM milestones to send back to Google Ads: tour scheduled, tour completed, application, enrollment</div></div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <div class="sh"><span class="num">01</span><h2>What we found</h2></div>
+  <p class="intro">A quick public review of both pages shows the foundations are in place: GTM is installed, Google Ads is loading, and leads come in through Gravity Forms. The gap is in the middle. <span class="hl">The click ID is not being captured at the form, so LeadSquared has no way to tell Google Ads which enrollments came from which click.</span></p>
+
+  <div class="findings">
+
+   <div class="fc">
+    <div class="top"><h3>The landing page form drops ad attribution before the lead reaches LeadSquared</h3><span class="tag high">High impact</span></div>
+    <p>The inquiry form on info.aspenlaurel.edu (Gravity Forms, ID 1) collects first name, last name, email and phone. <b>There are no hidden fields for GCLID, GBRAID, WBRAID or UTM values</b>, and no LeadSquared tracking script on the page. Without these, offline conversion uploads have nothing to match against.</p>
+    <div class="flowrow"><small>Today</small>
+     <div class="flow"><span class="node">Ad click with GCLID</span><span class="arr">&gt;</span><span class="node">Landing page</span><span class="arr">&gt;</span><span class="node x">Form: name, email, phone only</span><span class="arr">&gt;</span><span class="node x">LeadSquared: source unknown</span></div>
+    </div>
+    <div class="flowrow"><small>After setup</small>
+     <div class="flow"><span class="node">Ad click with GCLID</span><span class="arr">&gt;</span><span class="node ok">GCLID and UTMs stored for 90 days</span><span class="arr">&gt;</span><span class="node ok">Hidden fields filled on submit</span><span class="arr">&gt;</span><span class="node ok">LeadSquared fields mapped</span><span class="arr">&gt;</span><span class="node ok">Milestones sent to Google Ads</span></div>
+    </div>
+   </div>
+
+   <div class="fc">
+    <div class="top"><h3>Overlapping tags on the main site risk double counted data</h3><span class="tag high">High impact</span></div>
+    <p>aspenlaurel.edu loads <b>two GTM containers</b>, a GA4 tag placed directly in the page code, and a Universal Analytics ID that Google retired in 2024. The landing page runs one container and the Google Ads tag through GTM. Before any new conversions are added, these need to be reconciled so each event fires once.</p>
+    <div class="tw"><table>
+     <tr><th>Tag found</th><th>Main site</th><th>Landing page</th><th>Action</th></tr>
+     <tr><td>GTM-PLLGJ6S</td><td>Yes</td><td>Yes</td><td>Keep as the single source of truth</td></tr>
+     <tr><td>GTM-P5B7MM53</td><td>Yes</td><td>No</td><td>Audit contents, merge or remove</td></tr>
+     <tr><td>GA4 G-W83NZKV4X0 (hardcoded)</td><td>Yes</td><td>Not detected</td><td>Move into GTM, add to landing page</td></tr>
+     <tr><td>UA-112437286-1</td><td>Yes</td><td>No</td><td>Remove, no longer collects data</td></tr>
+     <tr><td>Google Ads AW-638968689</td><td>Via GTM</td><td>Via GTM</td><td>Review conversion actions, set primary and secondary</td></tr>
+    </table></div>
+   </div>
+
+   <div class="fc med">
+    <div class="top"><h3>Form and phone conversions need to measure real outcomes</h3><span class="tag medium">Medium impact</span></div>
+    <p>The form submits by AJAX, so there is no thank-you page URL to track. The conversion has to fire on the Gravity Forms confirmation event, not on a button click. Phone links point straight to the school numbers, so <b>a tap on the number is counted, but whether the call connected is not</b>.</p>
+    <div class="cmp">
+     <div class="bad"><h4>Counts the wrong thing</h4><ul><li>Submit button clicks, including failed validation</li><li>Phone number taps with no call</li><li>Form views or page loads</li></ul></div>
+     <div class="good"><h4>Counts what matters</h4><ul><li>Confirmed Gravity Forms submissions only</li><li>Connected calls over a set duration via forwarding numbers</li><li>Tours, applications and enrollments from LeadSquared</li></ul></div>
+    </div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<section class="white">
+ <div class="wrap">
+  <div class="sh"><span class="num">02</span><h2>The 30 day plan</h2></div>
+  <p class="intro">Five steps, in order, each one tested before the next starts. All work happens in your accounts with your team keeping full admin access.</p>
+
+  <div class="timeline">
+   <h3>Week by week</h3>
+   <div class="tl-head"><span></span><div class="wk"><span>Wk 1</span><span>Wk 2</span><span>Wk 3</span><span>Wk 4</span></div></div>
+   <div class="tl-row"><span>Tag audit and cleanup</span><div class="tl-track"><span class="on"></span><span></span><span></span><span></span></div></div>
+   <div class="tl-row"><span>Attribution capture to LeadSquared</span><div class="tl-track"><span class="on"></span><span class="on"></span><span></span><span></span></div></div>
+   <div class="tl-row"><span>Offline conversions and enhanced conversions</span><div class="tl-track"><span></span><span class="on"></span><span class="on"></span><span></span></div></div>
+   <div class="tl-row"><span>Phone call tracking</span><div class="tl-track"><span></span><span></span><span class="on"></span><span></span></div></div>
+   <div class="tl-row"><span>Testing, docs, staff walkthrough</span><div class="tl-track"><span></span><span></span><span class="on"></span><span class="on"></span></div></div>
+  </div>
+
+  <div class="steps">
+   <div class="step"><div class="sn">1</div><div>
+    <h4>Audit and clean up every tag</h4>
+    <ul><li>Review both GTM containers, GA4 and every Google Ads conversion action</li><li>Consolidate into one container, remove UA and duplicate GA4, add GA4 to the landing page</li><li>Fire the lead conversion on the Gravity Forms confirmation event only</li></ul>
+    <p class="why"><b>Why:</b> new conversions built on top of duplicate tags produce numbers nobody can trust.</p>
+   </div></div>
+   <div class="step"><div class="sn">2</div><div>
+    <h4>Capture GCLID and UTMs and map them into LeadSquared</h4>
+    <ul><li>Confirm auto-tagging, store GCLID, GBRAID, WBRAID and UTMs in a first party cookie</li><li>Add hidden fields to the form, filled on submit, surviving redirects and page changes</li><li>Map each value to dedicated LeadSquared lead fields with your programmer</li></ul>
+    <p class="why"><b>Why:</b> the click ID is the key that links an enrollment back to the ad that produced it.</p>
+   </div></div>
+   <div class="step"><div class="sn">3</div><div>
+    <h4>Send CRM milestones back to Google Ads automatically</h4>
+    <ul><li>Create four offline conversion actions: Tour Scheduled, Tour Completed, Application Submitted, Enrollment</li><li>Trigger uploads from LeadSquared stage changes through your existing Zapier account, with exact milestone timestamps</li><li>One upload per lead per milestone for duplicate prevention, plus a failed upload alert</li><li>Turn on enhanced conversions for leads using hashed email and phone</li></ul>
+    <p class="why"><b>Why:</b> Google Ads can only bid toward enrollments if it is told when they happen.</p>
+   </div></div>
+   <div class="step"><div class="sn">4</div><div>
+    <h4>Track calls that connect, not just taps</h4>
+    <ul><li>Set up Google forwarding numbers on the site and call assets on ads</li><li>Count calls over a minimum duration as conversions, keep number taps as a secondary signal</li><li>Document which call outcomes can be tied to LeadSquared records</li></ul>
+    <p class="why"><b>Why:</b> calls are a large share of school inquiries and today they are invisible to bidding.</p>
+   </div></div>
+   <div class="step"><div class="sn">5</div><div>
+    <h4>Test, document and hand over</h4>
+    <ul><li>Live test inquiry traced from click to LeadSquared to Google Ads, with screenshots</li><li>Recommended primary and secondary conversion setup for reporting and bidding</li><li>Written guide plus a short walkthrough on what admissions staff must record in LeadSquared</li><li>Defined post-launch troubleshooting period</li></ul>
+    <p class="why"><b>Why:</b> the system only stays accurate if staff update lead stages the same way every time.</p>
+   </div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <div class="sh"><span class="num">03</span><h2>Comparable results</h2></div>
+  <p class="intro">Recent accounts where the fix was the tracking and conversion signal, not more ad spend.</p>
+  <div class="res">
+
+   <div class="rc">
+    <div class="ind">Cosmetic surgery clinic, USD</div>
+    <div class="big">+140%</div>
+    <div class="cap">Confirmed bookings, 5 to 12, on level ad spend</div>
+    <div class="bar"><div class="lbl"><span>Cost per conversion before</span><span>$99.97</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>After</span><span>$46.15</span></div><div class="track"><div class="fill g" style="width:46%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Conversion rate</span><span>1.50% to 6.54%</span></div><div class="track"><div class="fill g" style="width:100%"></div></div></div>
+    <div class="lever">Reclassified micro conversions so bidding optimized toward confirmed bookings, re-established offline conversion uploads, set call conversions with minimum duration.</div>
+   </div>
+
+   <div class="rc">
+    <div class="ind">London plastic surgery clinic</div>
+    <div class="big">0 to 18</div>
+    <div class="cap">Book Appointment conversions after booking flow tracking went live</div>
+    <div class="bar"><div class="lbl"><span>Conversions before</span><span>5.00</span></div><div class="track"><div class="fill" style="width:29%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>After</span><span>17.19</span></div><div class="track"><div class="fill g" style="width:100%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Change</span><span>+243.8%</span></div><div class="track"><div class="fill g" style="width:100%"></div></div></div>
+    <div class="lever">Launched booking flow tracking that captured enquiries previously uncounted, on nearly flat spend.</div>
+   </div>
+
+   <div class="rc">
+    <div class="ind">UK dental practice</div>
+    <div class="big">254</div>
+    <div class="cap">Phone calls in a month, up from 175, with a 94.5% answer rate</div>
+    <div class="bar"><div class="lbl"><span>Calls before</span><span>175</span></div><div class="track"><div class="fill" style="width:69%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>After</span><span>254</span></div><div class="track"><div class="fill g" style="width:100%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Leads</span><span>104 to 156, +50%</span></div><div class="track"><div class="fill g" style="width:100%"></div></div></div>
+    <div class="lever">Full call tracking reconciliation, so every call lead was counted and attributed.</div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="sh"><span class="num">04</span><h2>What happens next</h2></div>
+  <div class="next">
+   <div class="nc"><div class="k">Step one</div><h4>Short call</h4><p>We confirm the scope, how leads currently reach LeadSquared, your call tracking provider, and the lead stages your admissions team uses.</p></div>
+   <div class="nc"><div class="k">Step two</div><h4>Access</h4><ul><li>Google Ads, GA4 and GTM admin</li><li>LeadSquared admin or API keys</li><li>Zapier account</li><li>WordPress access, or time with your programmer</li></ul></div>
+   <div class="nc"><div class="k">Week one</div><h4>First actions</h4><p>Full tag audit, written cleanup plan for your approval, and the attribution field list agreed with your programmer and LeadSquared support.</p></div>
+  </div>
+  <div class="own"><b>Ownership:</b> everything is built in your accounts. You keep full admin rights to every tag, field, Zap and document. Any paid tool or plan change is listed with its cost before anything is set up.</div>
+ </div>
+</section>
+
+<div class="cta">
+ <div class="wrap">
+  <h2>Let's have a quick call</h2>
+  <p>Reply to my message with a time that suits you.</p>
+ </div>
+</div>
+
+<footer>
+ <div class="wrap"><b>Usman Gull</b>, Google Ads and SEO Specialist</div>
+</footer>
+
+</body>
+</html>
